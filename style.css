@@ -1,0 +1,387 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&family=Roboto:wght@100;300&display=swap');
+
+
+  
+  
+  
+  
+  /* Definindo variáveis globais */
+
+  /* serve para adicionar uma animação de rolagem suave e agradável para o usuário quando se movimenta entre as seções da página HTML. */
+  html {
+    scroll-behavior: smooth;
+  }
+  *,
+  /*serve inclusive para os seletores*/
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+:root {
+  /* Cores */
+  --primary-color:hsl(0,0%,6.27%);
+  --secondary-color: hsl(0,0%,8.63%);
+  --third-color:hsl(0,0%,62.35%);
+  --fourth-color:hsl(158.73,100%,30.98%);
+
+  --font-color:hsl(0,0%,100%);
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  
+  /* Fontes */
+    --font-primary:'Poppins', sans-serif;
+    --font-secundary:'Roboto', sans-serif;;
+
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0; /* removendo a margem padrão da lista */
+  padding: 0; /* removendo o preenchimento padrão da lista */
+}
+
+a {
+  text-decoration: none;
+  margin: 0; /* removendo a margem padrão da lista */
+  padding: 0; /* removendo o preenchimento padrão da lista */
+}
+
+body{
+  background-color:var( --primary-color);
+  position: relative;
+  
+
+}
+
+header{
+  position:relative;
+  width: 100%;
+  height: 100vh;
+  
+}
+
+nav {
+  background-color: rgb(13, 13, 14);
+  padding: 25px;
+  font-family: var(--font-primary);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+
+.video-container {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit:cover;/*ajusta elemento dentro de containe preservanso a proporção e o aspecto*/
+  z-index: -1; /*Diz o grau de empilhameto/*/
+} 
+
+
+  h1{
+  position:absolute;
+  top:50%;
+  left:50%;
+  font-size:4em;
+  font-family: var(--font-primary);
+  transform: translate(-50%, -50%);
+  color:var(--font-color);
+ 
+  }
+
+ h2{
+  position:absolute;
+  top:60%;
+  left:50%;
+  font-size:3em;
+  font-family: var(--font-primary);
+  transform: translate(-50%, -50%);
+  color: var(--font-color)
+
+} 
+
+#initial-text{
+  color: var(--info-color);
+}
+
+
+section{
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  z-index: 3;
+}
+
+/*Seção de  Sobre Mim */
+
+.about-me{
+  display:grid;
+  grid-template-columns:40% 60%; /*indica quantidade e tamanhos das colunas*/
+  grid-row:1% 1%;
+  grid-gap:5px; /*espaçamento entre linhas e colunas*/
+  grid-template-areas: "title-about-me title-about-me" "my-image text-container";
+  color:var(--font-color);
+  font-size: var(--font-primary);
+  padding:4em;
+}
+
+#coment{
+  font-size:medium;
+  color:var(--third-color);
+}
+
+.title-about-me{
+  grid-area: title-about-me;
+  justify-self: center;/*alinha o item no*/
+  place-items: center;/* é como escrever: align-items: center;justify-items: center;*/
+  font-size: 3em;
+  padding: 5%;
+}
+
+
+
+
+.sub-title-about-me{
+  font-size:2em;
+  
+}
+
+.my-image img{
+  width:100%;
+  height:auto;
+}
+
+
+.description{
+grid-area: description;
+font-family: var(--font-primary);
+text-align:start; 
+color:var(--third-color);
+margin-bottom:2%; 
+border-bottom: solid 3px var(--third-color);
+padding:5%;
+}
+
+#ask{
+  color: #28a745;
+}
+
+#intro-sub-title{
+  margin-top: 3%;
+}
+
+.description-bottom {
+  /* grid-area: description-bottom; */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px; /* Define o espaçamento entre as células */
+}
+
+.data{
+  /* grid-area: data; */
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.data li{
+ /*  background-color: #f5f5f5; */
+  padding: 10px;
+  justify-self:start;
+  
+}
+
+#email{
+  color:var(--fourth-color)
+}
+
+.data-color{
+color: var(--third-color);
+}
+
+.btn-cv{
+  background-color: hsl(158.73, 100%, 30.98%);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.6;
+  transition: 0.3s;
+  margin-top: 3%;
+}
+
+.btn-cv:hover{
+  opacity:1;
+}
+
+.social{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr ;
+  padding-top:auto;
+  margin-top: 2%;
+}
+
+.social-links{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+  
+}
+.social-links img{
+  height: 2em;
+  height: 2em;
+}
+
+#social-border{
+  border-bottom: solid 3px var(--third-color);
+  width: 3em;
+}
+
+/****/
+/* tela pequena */
+@media screen and (max-width: 768px) {
+  .about-me {
+    grid-template-columns: 1fr; /* mudar para apenas uma coluna */
+    grid-template-areas: 
+      "title-about-me"
+      "my-image"
+      "text-container";
+  }
+  
+  .my-image img {
+    width: 100%; /* fazer a imagem ocupar toda a largura da célula */
+    height: auto; /* ajustar a altura proporcionalmente */
+    border-radius: 50%;
+  }
+  
+  .social {
+    margin-top: 5%; /* aumentar a margem superior */
+  }
+  
+  .btn-cv {
+    margin-top: 5%; /* aumentar a margem superior */
+  }
+
+ /*  .text-container {
+    font-size:8px;
+  } */
+
+}
+
+
+/* tela média */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-me {
+    grid-template-columns: 1fr 1fr; /* mudar para duas colunas iguais */
+    grid-template-areas: 
+      "title-about-me title-about-me"
+      "my-image text-container";
+  }
+  
+  .my-image img {
+    width: 100%; /* fazer a imagem ocupar toda a largura da célula */
+    height: auto; /* ajustar a altura proporcionalmente */
+  }
+  
+  .social {
+    margin-top: 5%; /* aumentar a margem superior */
+  }
+  
+  .btn-cv {
+    margin-top: 5%; /* aumentar a margem superior */
+  }
+}
+
+/* tela grande */
+@media screen and (min-width: 1025px) {
+  .about-me {
+    grid-template-columns: 40% 60%; /* voltar para o layout original */
+    grid-template-areas: 
+      "title-about-me title-about-me"
+      "my-image text-container";
+  }
+  
+  .my-image img {
+    width: 22em; /* voltar para o tamanho original */
+    height: 30em; /* voltar para o tamanho original */
+  }
+  
+  .social {
+    margin-top: 2%; /* voltar para a margem original */
+  }
+  
+  .btn-cv {
+    margin-top: 3%; /* voltar para a margem original */
+  }
+}
+
+/************************************************Section Projetos*/
+.projects{
+  display: grid;
+  grid-template-columns: 1fr; /* uma coluna */
+  grid-template-rows:2em 10em; /* 6 linhas */
+  gap: 2em; /* espaço entre as linhas */
+  height: 100%; /* altura do container */
+  
+}
+
+/* #projects{
+  align-self: center;
+  font-family: var(--font-primary);
+  color: var(--third-color);
+  padding: 10px;
+  text-align: center;
+
+} */
+   
+.title-projects{
+  align-self: center;/*ficou no centro do grid*/
+  font-family: var(--font-primary);
+  text-align: center;
+  color: var(--third-color);
+}  
+.image-projects{
+  display: flex;
+  justify-content:space-evenly;
+  
+}
+ 
+.image-projects img{
+  height:10em;
+  width:14em;
+ 
+}
+
+
+
