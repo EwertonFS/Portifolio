@@ -12,7 +12,7 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="navBar">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -25,6 +25,13 @@
       </video>
       <h1>Ewerton Francis</h1>
       <h2>I'am <span id="initial-text">Developer</span></h2>
+
+      <div class="icon-header">
+        <img src="Assets/Icones/forBlack/linkedin.svg" alt="linkedin" />
+        <img src="Assets/Icones/forBlack/github.svg" alt="github" />
+        <img src="Assets/Icones/forBlack/whatsapp.svg" alt="whatsapp" />
+        <img src="Assets/Icones/forBlack/instagram.svg" alt="instagram" />
+      </div>
     </header>
 
     <section id="about" class="about-me">
@@ -104,11 +111,33 @@
       </div>
     </section>
     <section id="projects" class="projects">
-           <!--  <h3 id="projects">Projects</h3> -->
-      <div class="title-projects">
+      <!--  <h3 id="projects">Projects</h3> -->
+      <!--  <div class="title-projects">
         <h3>FrontEnd</h3>
+      </div> -->
+      <div class="title-projects">
+        <p id="coment-projects">Showcasing some of my best work</p>
+        <h3 class="title-section">Projetos</h3>
       </div>
-      <div class="image-projects">
+      <ul class="find-classification">
+        <li class="project-sub-title"><a href="front">FrontEnd</a></li>
+        <li class="project-sub-title"><a href="back">BackEnd</a></li>
+        <li class="project-sub-title"><a href="full"> FullStack</a></li>
+      </ul>
+
+      <div id="front" class="image-projects">
+        <img src="Assets/Imagens/labeedit.png" alt="" class="item-image" />
+        <img src="Assets/Imagens/labex.png" alt="" class="item-image" />
+        <img src="Assets/Imagens/labninja.png" alt="" class="item-image" />
+        <img src="Assets/Imagens/challange.png" alt="" class="item-image" />
+        <img src="Assets/Imagens/labeedit.png" alt="" class="item-image" />
+        <!-- <img src="Assets/Imagens/3.jpg" alt="" /> -->
+      </div>
+
+      <!--   <div class="title-projects">
+        <p>BackEnd</p>
+      </div> -->
+      <div id="back" class="image-projects">
         <img src="Assets/Imagens/1.jpg" alt="" />
         <img src="Assets/Imagens/2.jpg" alt="" />
         <img src="Assets/Imagens/3.jpg" alt="" />
@@ -117,35 +146,59 @@
         <!-- <img src="Assets/Imagens/3.jpg" alt="" /> -->
       </div>
 
-      <div class="title-projects">
-        <h3>BackEnd</h3>
-      </div>
-      <div class="image-projects">
-        <img src="Assets/Imagens/1.jpg" alt="" />
-        <img src="Assets/Imagens/2.jpg" alt="" />
-        <img src="Assets/Imagens/3.jpg" alt="" />
-        <img src="Assets/Imagens/1.jpg" alt="" />
-        <img src="Assets/Imagens/2.jpg" alt="" />
-        <!-- <img src="Assets/Imagens/3.jpg" alt="" /> -->
-      </div>
-
-      <div class="title-projects">
-        <h3>FullStack</h3>
-      </div>
-      <div class="image-projects">
+      <!-- <div class="title-projects">
+        <p>FullStack</p> -->
+      <!-- </div> -->
+      <div id="full" class="image-projects">
         <img src="Assets/Imagens/1.jpg" alt="" />
         <img src="Assets/Imagens/2.jpg" alt="" />
         <img src="Assets/Imagens/3.jpg" alt="" />
       </div>
-    </section>
-    <section id="contact" #>
-      <img src="" alt="" />
-      <h3>Contact</h3>
-    </section>
-    <footer></footer>
-    <button></button>
-    <button></button>
 
-    <script src="app.js" />
+      <!--    <div class="carousel-nav">
+          <span class="carousel-button"></span>
+          <span class="carousel-button " ></span>
+          <span class="carousel-button"></span>
+      </div> -->
+    </section>
+    <section id="contact" class="contact-me">
+      <div class="title-contact-me">
+        <p id="coment-title-contact-me">Feel free to contact me anytimes</p>
+        <h3>Contact-me</h3>
+      </div>
+      <div class="form-contact-me">
+        <form action="submit" class="form-name">
+          <label for="username"
+            >Your Name
+            <input type="text" placeholder="digite o nome do ususario" />
+            <a> Aqui a mensagem de erro</a>
+            <!-- <button class="btn-cv">botao</button> -->
+          </label>
+        </form>
+
+        <form action="submit" class="form-email">
+        <input type="text" placeholder="digite o nome do ususario" />
+        <a> Aqui a mensagem de erro</a>
+        <form />
+        <form action="submit" class="form-subject">
+          <input type="text" placeholder="digite o nome do ususario" />
+          <a> Aqui a mensagem de erro</a>
+        </form>
+
+        <form action="submit" class="message">
+          <input type="text" placeholder="digite o nome do ususario" />
+          <a> Aqui a mensagem de erro</a>
+        </form>
+      </div>
+      <div class="my-contact">
+        <p class="sub-title-my-contact">
+          Always available for freelance work if the right project comes along,
+          Feel free to contact me!
+        </p>
+        <p>ME CONTRATE</p>
+      </div>
+    </section>
+
+    <script src="portifolio.js" />
   </body>
 </html>
