@@ -166,36 +166,93 @@
         <p id="coment-title-contact-me">Feel free to contact me anytimes</p>
         <h3>Contact-me</h3>
       </div>
+
       <div class="form-contact-me">
-        <form action="submit" class="form-name">
-          <label for="username"
-            >Your Name
-            <input type="text" placeholder="digite o nome do ususario" />
-            <a> Aqui a mensagem de erro</a>
-            <!-- <button class="btn-cv">botao</button> -->
-          </label>
+        <form action="https://exemplo.com/submit" class="form-name" required>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            placeholder="Name"
+            id="name"
+            name="name"
+            required
+          />
         </form>
 
-        <form action="submit" class="form-email">
-        <input type="text" placeholder="digite o nome do ususario" />
-        <a> Aqui a mensagem de erro</a>
-        <form />
-        <form action="submit" class="form-subject">
-          <input type="text" placeholder="digite o nome do ususario" />
-          <a> Aqui a mensagem de erro</a>
+        <form action="https://exemplo.com/submit" class="form-email" required>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            placeholder="digite o nome do ususario"
+            id="email"
+            name="email"
+            required
+          />
         </form>
 
-        <form action="submit" class="message">
-          <input type="text" placeholder="digite o nome do ususario" />
-          <a> Aqui a mensagem de erro</a>
+        <form action="https://exemplo.com/submit" class="form-subject" required>
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            placeholder="digite o nome do ususario"
+            id="subject"
+            name="subject"
+            required
+          />
+        </form>
+
+        <form action="https://exemplo.com/submit" class="form-message" required>
+          <label for="texto">Message</label>
+          <br />
+          <textarea
+            id="texto"
+            name="texto"
+            rows="10"
+            cols="50"
+            placeholder="type here"
+          ></textarea>
+          <br />
+          <input type="submit" value="Enviar" id="btn"/>
         </form>
       </div>
+
       <div class="my-contact">
-        <p class="sub-title-my-contact">
-          Always available for freelance work if the right project comes along,
-          Feel free to contact me!
-        </p>
-        <p>ME CONTRATE</p>
+        <div class="title-my-contact">
+          <h3>Contact-me</h3>
+        </div>
+        <div class="sub-title-my-contact">
+          <p>
+            Always available for freelance work if the right project comes
+            along, Feel free to contact me!
+          </p>
+        </div>
+
+        <div class="icons">
+          <img src="Assets/Icones/forGreen/iconPerson.png" alt="person" />
+          <img
+            src="Assets/Icones/forGreen/icons8-enviar-e-mail-48.png"
+            alt="email"
+          />
+          <img
+            src="Assets/Icones/forGreen/icons8-volume-da-campainha-48.png"
+            alt="phone"
+          />
+      
+          <img
+            src="Assets/Icones/forGreen/icons8-marcador-de-mapa-50.png"
+            alt="phone"
+          />
+        </div>
+        <div class="icons-contact">
+          <h3 class="highlights">Name</h3>
+          <p>Ewerton Francis</p>
+          <h3 class="highlights">Email</h3>
+          <p>ewerton.businees@gmail.com</p>
+          <h3 class="highlights">Phone</h3>
+          <p>(79) 9 98311993</p>
+          <h3 class="highlights">Location</h3>
+          <p>Aracaju-Sergipe</p>
+        </div>
       </div>
     </section>
 

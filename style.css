@@ -27,6 +27,7 @@
   --secondary-color: hsl(0,0%,8.63%);
   --third-color:hsl(0,0%,62.35%);
   --fourth-color:hsl(158.73,100%,30.98%);
+  --input:hsl(210,10.34%,22.75%);
 
   --font-color:hsl(0,0%,100%);
   --success-color: #28a745;
@@ -519,9 +520,10 @@ a:hover{
 
  .contact-me{
   display: grid;
-  grid-template-columns:60% 40%;
-  grid-template-rows: 20% 80%;
-  grid-template-areas:"title-contact-me title-contact-me""form-contact-me my-contact-me";
+  grid-template-columns:55% 45%;
+  grid-template-rows: 35% 65%;
+  grid-template-areas:"title-contact-me title-contact-me""form-contact-me my-contact";
+  padding:3%;
   
  }
 
@@ -529,105 +531,151 @@ a:hover{
   font-size:medium;
   color:var(--third-color);
   }
+
  .title-contact-me{
   grid-area: title-contact-me;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: aliceblue;
-  font-size: xx-large;
+  color: var(--font-color);
+  font-size: 3em;
  }
 
  
   .form-contact-me{
    grid-area: form-contact-me;
    display: grid;
-   grid-auto-flow:row;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 20% 60%;
-  color: var(--secundary-color);
-  
-  }
+   grid-template-columns:1fr 1fr;
+   grid-template-rows:auto; /* 20% 20% 60%; */
+   column-gap: 2em;
+   align-items:start;
+   margin-bottom: 20%;
+  color: var(--font-color);
+  grid-template-areas:
+  "form-name form-email"
+  "form-subject form-subject" 
+  "form-message form-message";
+  padding: 2%;
+  } 
+
   .form-name{
+  grid-area: form-name;
   display: grid;
-  align-items: center;
-  justify-content:stretch;
+ 
+  
   
   }
   .form-email{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-area: form-email;
+    justify-content: stretch;
   }
-
- .my-contact{
-  display: grid;
-  grid-area: my-contact-me;
-  justify-items: center;
-  color: var(--third-color);
- } 
-
- /* .form-contact-me{
-  grid-area: form-contact-me;
-  display:flex;
-  flex-direction: column;
-  color: var(--secundary-color);
-}
-
-.form-name{
-  display: inline-block;
-}
- */
- 
-
- label{
-  color: #dc3545;
- }
-  .sub-title-my-contact-me{
+  .form-subject{
+    display: grid;
+    grid-area: form-subject;
     
   }
- /* .elemento {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-}
 
-.elemento img {
-  transition: all 0.3s ease-out;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  .form-message{
+    display: grid;
+    grid-area:form-message;
 
-.elemento:hover img {
-  transform: scale(1.2);
-}
- */
-/*segundo exemplo*/
-/*   .elemento {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-}
+  } 
 
-.elemento img {
-  transition: all 0.3s ease-out;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.elemento:hover img {
-  transform: scale(1.2);
-  width: 240px;
-  height: 240px;
-}
+  
+  
+ textarea{
+  background-color: var(--secondary-color);
+  
+ }
  
- */
+ input{
+  color: var(--third-color);
+  background-color: var(--secondary-color);
+  height: 3em; 
+  border: none;
+  border-bottom: 2px solid  var(--third-color);
+  transition: all 0.3s ease-in-out;
+ }
+
+ input:hover{
+  border-bottom: 2px solid var(--fourth-color);
+  transform: scale(1.0.5);
+ }
+
+ label{
+  color:var(--font-color);
+  font-size: large;
+  font-weight: bold;
+  }
+
+  #btn{
+  background-color: hsl(158.73, 100%, 30.98%);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.6;
+  transition: 0.3s;
+  margin-top: 3%;
+  
+}
+
+#btn:hover{
+  opacity:8;
+  filter: brightness(125%)
+} 
+
+.my-contact{
+  grid-area: my-contact;
+  color: var(--third-color);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+  "title-my-contact title-my-contact" 
+  "sub-title-my-contact sub-title-my-contact"
+  "icons icons-contact";
+ /*  justify-items: center;
+  justify-content:stretch; */
+  padding: 2%;
+  margin-bottom:30%;
+} 
+
+.title-my-contact{
+display: grid;
+grid-area: title-my-contact;
+font-size: large;
+color: var(--font-color);
+font-weight: bold;
+
+}
+
+.sub-title-my-contact{
+  display: grid;
+  grid-area: sub-title-my-contact;
+  text-align:start;
+}
+
+.icons{
+display: grid;
+grid-area: icons;
+justify-content: center;
+border-right:solid 3px var(--third-color);
+}
+
+.icons-contact{
+  display: grid;
+  grid-area: icons-contact;
+  justify-items:start;
+  margin-left: 10%;
+  
+}
+
+.highlights{
+  color: var(--font-color);
+font-weight: bold;
+}
