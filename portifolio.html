@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="style.css" />
     <!-- fonte Acrescentar pops sanserif-->
 
@@ -23,9 +24,10 @@
       <video class="video-container" muted autoplay loop>
         <source src="./Assets/videos/verdeVideo.mp4" type="video/mp4" />
       </video>
+      <div class="name">
       <h1>Ewerton Francis</h1>
-      <h2>I'am <span id="initial-text">Developer</span></h2>
-
+      <!-- <h2>I'am <span id="initial-text"></span></h2> -->
+      </div>
       <div class="icon-header">
         <img src="Assets/Icones/forBlack/linkedin.svg" alt="linkedin" />
         <img src="Assets/Icones/forBlack/github.svg" alt="github" />
@@ -111,56 +113,112 @@
       </div>
     </section>
     <section id="projects" class="projects">
-      <!--  <h3 id="projects">Projects</h3> -->
-      <!--  <div class="title-projects">
-        <h3>FrontEnd</h3>
-      </div> -->
+    
       <div class="title-projects">
         <p id="coment-projects">Showcasing some of my best work</p>
         <h3 class="title-section">Projetos</h3>
       </div>
+      
       <ul class="find-classification">
         <li class="project-sub-title"><a href="front">FrontEnd</a></li>
         <li class="project-sub-title"><a href="back">BackEnd</a></li>
         <li class="project-sub-title"><a href="full"> FullStack</a></li>
       </ul>
 
-      <div id="front" class="image-projects">
-        <img src="Assets/Imagens/labeedit.png" alt="" class="item-image" />
-        <img src="Assets/Imagens/labex.png" alt="" class="item-image" />
-        <img src="Assets/Imagens/labninja.png" alt="" class="item-image" />
-        <img src="Assets/Imagens/challange.png" alt="" class="item-image" />
-        <img src="Assets/Imagens/labeedit.png" alt="" class="item-image" />
-        <!-- <img src="Assets/Imagens/3.jpg" alt="" /> -->
-      </div>
+      <div class="carousel">
+      
+      <div id="front" class="carousel-front">
+        <a href="">
+          <img src="Assets/Imagens/labeedit.png" alt="" />
+          <footer >description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/labex.png" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/labninja.png" alt="" />
+          <footer>description</footer>
+        </a> 
+         
+        <a href="">
+          <img src="Assets/Imagens/challange.png" alt="" />
+          <footer>description</footer>
+        </a>
 
-      <!--   <div class="title-projects">
-        <p>BackEnd</p>
-      </div> -->
-      <div id="back" class="image-projects">
-        <img src="Assets/Imagens/1.jpg" alt="" />
-        <img src="Assets/Imagens/2.jpg" alt="" />
-        <img src="Assets/Imagens/3.jpg" alt="" />
-        <img src="Assets/Imagens/1.jpg" alt="" />
-        <img src="Assets/Imagens/2.jpg" alt="" />
-        <!-- <img src="Assets/Imagens/3.jpg" alt="" /> -->
+        <a href="">
+          <img src="Assets/Imagens/labeedit.png" alt="" />
+          <footer>description</footer>
+        </a>
       </div>
+          
+      
 
-      <!-- <div class="title-projects">
-        <p>FullStack</p> -->
-      <!-- </div> -->
-      <div id="full" class="image-projects">
-        <img src="Assets/Imagens/1.jpg" alt="" />
-        <img src="Assets/Imagens/2.jpg" alt="" />
-        <img src="Assets/Imagens/3.jpg" alt="" />
+      <div id="back" class="carousel-back">
+        <a href="">
+          <img src="Assets/Imagens/back.jpeg" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/back.jpeg" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/back.jpeg" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/back.jpeg" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/back.jpeg" alt="" />
+          <footer>description</footer>
+        </a>
       </div>
+      
+         <div id="full" class="carousel-full">
 
-      <!--    <div class="carousel-nav">
-          <span class="carousel-button"></span>
-          <span class="carousel-button " ></span>
-          <span class="carousel-button"></span>
-      </div> -->
+          <a href="">
+            <img src="Assets/Imagens/full.jpg" alt="" />
+            <footer>description</footer>
+          </a>
+          <a href="">
+            <img src="Assets/Imagens/full.jpg" alt="" />
+            <footer>description</footer>
+          </a>
+          <a href="">
+            <img src="Assets/Imagens/full.jpg" alt="" />
+            <footer>description</footer>
+          </a>
+          <a href="">
+            <img src="Assets/Imagens/full.jpg" alt="" />
+            <footer>description</footer>
+          </a>
+          <a href="">
+            <img src="Assets/Imagens/full.jpg" alt="" />
+            <footer>description</footer>
+          </a>
+         </div>
+          <div class="carousel-nav">
+           <span class="carousel-button" ></span>
+           <span class="carousel-button" ></span>
+           <span class="carousel-button"></span>
+          </div>
+         </div>
+       
+      
+
+    </div>
     </section>
+
+        
+        
+        
+        
+        
+
+
     <section id="contact" class="contact-me">
       <div class="title-contact-me">
         <p id="coment-title-contact-me">Feel free to contact me anytimes</p>
