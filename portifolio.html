@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="stylesheet" href="style.css" />
     <!-- fonte Acrescentar pops sanserif-->
 
     <title>Portifólio</title>
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav>
         <ul class="navBar">
           <li><a href="#home">Home</a></li>
@@ -19,14 +19,14 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </nav >
 
       <video class="video-container" muted autoplay loop>
         <source src="./Assets/videos/verdeVideo.mp4" type="video/mp4" />
       </video>
       <div class="name">
-      <h1>Ewerton Francis</h1>
-      <!-- <h2>I'am <span id="initial-text"></span></h2> -->
+        <h1>Ewerton Francis</h1>
+        <!-- <h2>I'am <span id="initial-text"></span></h2> -->
       </div>
       <div class="icon-header">
         <img src="Assets/Icones/forBlack/linkedin.svg" alt="linkedin" />
@@ -113,48 +113,45 @@
       </div>
     </section>
     <section id="projects" class="projects">
-    
       <div class="title-projects">
         <p id="coment-projects">Showcasing some of my best work</p>
         <h3 class="title-section">Projetos</h3>
       </div>
-      
-      <ul class="find-classification">
-        <li class="project-sub-title"><a href="front">FrontEnd</a></li>
-        <li class="project-sub-title"><a href="back">BackEnd</a></li>
-        <li class="project-sub-title"><a href="full"> FullStack</a></li>
+
+      <ul class="find-classification" onclick="classification()">
+        <li class="project-sub-title" id="front">FrontEnd</li>
+        <li class="project-sub-title" id="back">BackEnd</li>
+        <li class="project-sub-title" id="full">FullStack</li>
       </ul>
 
       <div class="carousel">
-      
-      <div id="front" class="carousel-front">
-        <a href="">
-          <img src="Assets/Imagens/labeedit.png" alt="" />
-          <footer >description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/labex.png" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/labninja.png" alt="" />
-          <footer>description</footer>
-        </a> 
-         
-        <a href="">
-          <img src="Assets/Imagens/challange.png" alt="" />
-          <footer>description</footer>
-        </a>
+        <div id="front" class="carousel-item">
+          <a href="">
+            <img src="Assets/Imagens/labeedit.png" alt="" />
+            <footer>description</footer>
+          </a>
+          <a href="">
+            <img src="Assets/Imagens/labex.png" alt="" />
+            <footer>description</footer>
+          </a>
+          <a href="">
+            <img src="Assets/Imagens/labninja.png" alt="" />
+            <footer>description</footer>
+          </a>
 
-        <a href="">
-          <img src="Assets/Imagens/labeedit.png" alt="" />
-          <footer>description</footer>
-        </a>
-      </div>
-          
-      
+          <a href="">
+            <img src="Assets/Imagens/challange.png" alt="" />
+            <footer>description</footer>
+          </a>
 
-      <div id="back" class="carousel-back">
+          <a href="">
+            <img src="Assets/Imagens/labeedit.png" alt="" />
+            <footer>description</footer>
+          </a>
+        </div>
+     
+
+      <div id="back" class="carousel-item">
         <a href="">
           <img src="Assets/Imagens/back.jpeg" alt="" />
           <footer>description</footer>
@@ -176,48 +173,38 @@
           <footer>description</footer>
         </a>
       </div>
-      
-         <div id="full" class="carousel-full">
 
-          <a href="">
-            <img src="Assets/Imagens/full.jpg" alt="" />
-            <footer>description</footer>
-          </a>
-          <a href="">
-            <img src="Assets/Imagens/full.jpg" alt="" />
-            <footer>description</footer>
-          </a>
-          <a href="">
-            <img src="Assets/Imagens/full.jpg" alt="" />
-            <footer>description</footer>
-          </a>
-          <a href="">
-            <img src="Assets/Imagens/full.jpg" alt="" />
-            <footer>description</footer>
-          </a>
-          <a href="">
-            <img src="Assets/Imagens/full.jpg" alt="" />
-            <footer>description</footer>
-          </a>
-         </div>
+      <div id="full" class="carousel-item">
+        <a href="">
+          <img src="Assets/Imagens/full.jpg" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/full.jpg" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/full.jpg" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/full.jpg" alt="" />
+          <footer>description</footer>
+        </a>
+        <a href="">
+          <img src="Assets/Imagens/full.jpg" alt="" />
+          <footer>description</footer>
+        </a>
+        <!-- 
           <div class="carousel-nav">
-           <span class="carousel-button" ></span>
-           <span class="carousel-button" ></span>
-           <span class="carousel-button"></span>
+            <span class="carousel-button"></span>
+            <span class="carousel-button"></span>
+            <span class="carousel-button"></span>
           </div>
-         </div>
-       
-      
-
-    </div>
+        </div> -->
+        </div>
+      </div>
     </section>
-
-        
-        
-        
-        
-        
-
 
     <section id="contact" class="contact-me">
       <div class="title-contact-me">
@@ -226,7 +213,7 @@
       </div>
 
       <div class="form-contact-me">
-        <form action="https://exemplo.com/submit" class="form-name" required>
+        <form action="https://exemplo.com/submit" class="form-name">
           <label for="name">Name</label>
           <input
             type="text"
@@ -236,8 +223,8 @@
             required
           />
         </form>
-
-        <form action="https://exemplo.com/submit" class="form-email" required>
+      
+        <form action="https://exemplo.com/submit" class="form-email">
           <label for="email">Email</label>
           <input
             type="email"
@@ -247,8 +234,8 @@
             required
           />
         </form>
-
-        <form action="https://exemplo.com/submit" class="form-subject" required>
+      
+        <form action="https://exemplo.com/submit" class="form-subject">
           <label for="subject">Subject</label>
           <input
             type="text"
@@ -258,8 +245,8 @@
             required
           />
         </form>
-
-        <form action="https://exemplo.com/submit" class="form-message" required>
+      
+        <form action="https://exemplo.com/submit" class="form-message">
           <label for="texto">Message</label>
           <br />
           <textarea
@@ -268,11 +255,13 @@
             rows="10"
             cols="50"
             placeholder="type here"
+            required
           ></textarea>
           <br />
-          <input type="submit" value="Enviar" id="btn"/>
+          <input type="submit" value="Enviar" id="btn" />
         </form>
       </div>
+      
 
       <div class="my-contact">
         <div class="title-my-contact">
@@ -295,7 +284,7 @@
             src="Assets/Icones/forGreen/icons8-volume-da-campainha-48.png"
             alt="phone"
           />
-      
+
           <img
             src="Assets/Icones/forGreen/icons8-marcador-de-mapa-50.png"
             alt="phone"
