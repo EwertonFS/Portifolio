@@ -13,36 +13,48 @@
   <body>
     <header id="home">
       <nav>
-        <ul class="navBar">
+        <ul class="navBar" onclick="navUser(event)">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav >
+      </nav>
 
       <video class="video-container" muted autoplay loop>
-        <source src="./Assets/videos/verdeVideo.mp4" type="video/mp4" />
+        <source
+          src="./Assets/videos/vecteezy_aurora-borealis-northern-lights_16191969_100.mp4"
+          type="video/mp4"
+        />
       </video>
       <div class="name">
         <h1>Ewerton Francis</h1>
-        <!-- <h2>I'am <span id="initial-text"></span></h2> -->
+        <h2>I'am <span id="initial-text"></span></h2>
       </div>
       <div class="icon-header">
-        <img src="Assets/Icones/forBlack/linkedin.svg" alt="linkedin" />
-        <img src="Assets/Icones/forBlack/github.svg" alt="github" />
-        <img src="Assets/Icones/forBlack/whatsapp.svg" alt="whatsapp" />
-        <img src="Assets/Icones/forBlack/instagram.svg" alt="instagram" />
+        <a href="https://www.linkedin.com/in/ewertonfrancis/">
+          <img src="Assets/Icones/forBlack/linkedin.svg" alt="linkedin" />
+        </a>
+        <a href="https://github.com/EwertonFS/EwertonFs">
+          <img src="Assets/Icones/forBlack/github.svg" alt="github" />
+        </a>
+        <a href="https://wa.me/5579998311993">
+          <img src="Assets/Icones/forBlack/whatsapp.svg" alt="whatsapp" />
+        </a>
+        <a href="https://www.instagram.com/">
+          <img src="Assets/Icones/forBlack/instagram.svg" alt="instagram" />
+        </a>
       </div>
     </header>
 
     <section id="about" class="about-me">
       <div class="title-about-me">
         <p id="coment">why me ?</p>
-        <h3>About for Me</h3>
+        <h3>About Me</h3>
+        <div class="border-animation-about"></div>
       </div>
       <div class="my-image">
-        <img src="Assets/Imagens/eu.jfif" alt="profile" />
+        <img src="Assets/Imagens/number3.jpeg" alt="profile" />
       </div>
 
       <div class="text-contained">
@@ -80,7 +92,12 @@
         <div class="social">
           <ul class="social-links">
             <li>
-              <button class="btn-cv">Curriculum</button>
+              <a
+                href="https://drive.google.com/file/d/1oeHthNGcUGZlqRg137RifTcW3q4z2NwY/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><button class="btn-cv">Curriculum</button></a
+              >
             </li>
             <li>
               <p id="social-border"></p>
@@ -112,96 +129,273 @@
         </div>
       </div>
     </section>
+
     <section id="projects" class="projects">
       <div class="title-projects">
         <p id="coment-projects">Showcasing some of my best work</p>
-        <h3 class="title-section">Projetos</h3>
+        <h3 class="title-section">Projects</h3>
+        <div class="border-animation-project"></div>
       </div>
 
-      <ul class="find-classification" onclick="classification()">
-        <li class="project-sub-title" id="front">FrontEnd</li>
-        <li class="project-sub-title" id="back">BackEnd</li>
-        <li class="project-sub-title" id="full">FullStack</li>
+      <ul class="find-classification">
+        <li
+          class="project-sub-title"
+          id="all"
+          onclick="classification(event, 'all')"
+        >
+          All
+        </li>
+        <li
+          class="project-sub-title"
+          id="frontend"
+          data-category="frontend"
+          onclick="classification(event, 'front')"
+        >
+          FrontEnd
+        </li>
+        <li
+          class="project-sub-title"
+          id="backend"
+          onclick="classification(event, 'back')"
+        >
+          BackEnd
+        </li>
+        <li
+          class="project-sub-title"
+          id="fullstack"
+          onclick="classification(event, 'full')"
+        >
+          FullStack
+        </li>
       </ul>
+      '
 
       <div class="carousel">
         <div id="front" class="carousel-item">
-          <a href="">
-            <img src="Assets/Imagens/labeedit.png" alt="" />
-            <footer>description</footer>
-          </a>
-          <a href="">
-            <img src="Assets/Imagens/labex.png" alt="" />
-            <footer>description</footer>
-          </a>
-          <a href="">
-            <img src="Assets/Imagens/labninja.png" alt="" />
-            <footer>description</footer>
-          </a>
-
-          <a href="">
-            <img src="Assets/Imagens/challange.png" alt="" />
-            <footer>description</footer>
-          </a>
-
-          <a href="">
-            <img src="Assets/Imagens/labeedit.png" alt="" />
-            <footer>description</footer>
-          </a>
-        </div>
-     
-
-      <div id="back" class="carousel-item">
-        <a href="">
-          <img src="Assets/Imagens/back.jpeg" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/back.jpeg" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/back.jpeg" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/back.jpeg" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/back.jpeg" alt="" />
-          <footer>description</footer>
-        </a>
-      </div>
-
-      <div id="full" class="carousel-item">
-        <a href="">
-          <img src="Assets/Imagens/full.jpg" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/full.jpg" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/full.jpg" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/full.jpg" alt="" />
-          <footer>description</footer>
-        </a>
-        <a href="">
-          <img src="Assets/Imagens/full.jpg" alt="" />
-          <footer>description</footer>
-        </a>
-        <!-- 
-          <div class="carousel-nav">
-            <span class="carousel-button"></span>
-            <span class="carousel-button"></span>
-            <span class="carousel-button"></span>
+          <div class="card-front">
+            <a href="http://abandoned-side.surge.sh/" target="_blank">
+              <img src="Assets/Imagens/labninja.png" alt="" />
+            </a>
+            <a
+              href="https://github.com/future4code/Moreira-labe-ninja5"
+              target="_blank"
+              ><footer>LabNinja</footer></a
+            >
           </div>
-        </div> -->
+          <div class="card-front">
+            <a href="<http://distinct-car.surge.sh/>" target="_blank">
+              <img src="Assets/Imagens/labeedit.png" alt="" />
+            </a>
+            <a href="https://github.com/EwertonFS/LabEddit"
+              ><footer>Labeedit</footer></a
+            >
+          </div>
+
+          <div class="card-front">
+            <a href="<https://silent-quince.surge.sh/>" target="_blank">
+              <img src="Assets/Imagens/labex.png" alt="" />
+            </a>
+            <a href="https://github.com/EwertonFS/Projeto-Labex" target="_blank"
+              ><footer>Labex</footer></a
+            >
+          </div>
+
+          <div class="card-front">
+            <a href="https://github.com/EwertonFS/Astromatch">
+              <img src="Assets/Imagens/Astromatch.png" alt="" />
+            </a>
+            <a
+              href="https://github.com/EwertonFS/Astromatch"
+              title="GitHUb
+            "
+              ><footer>Astromatch</footer></a
+            >
+          </div>
+
+          <div class="card-front">
+            <a href="">
+              <img src="Assets/Imagens/LabEcomerce.png" alt="" />
+            </a>
+            <a href="https://github.com/future4code/Moreira-labe-commerce2"
+              ><footer>Lab Ecommerce</footer></a
+            >
+          </div>
+
+          <div class="card-front">
+            <a href="">
+              <img src="Assets/Imagens/frontJust.jpg" alt="" />
+            </a>
+            <a href="https://github.com/EwertonFS/Pokedex-Front"
+              ><footer>Pokedex</footer></a
+            >
+          </div>
+
+          <div class="card-front">
+            <a href="">
+              <img src="Assets/Imagens/frontJust.jpg" alt="" />
+            </a>
+            <a href="https://github.com/EwertonFS/Pokedex-Front"
+              ><footer>Pokedex</footer></a
+            >
+          </div>
+
+          <div class="card-front">
+            <a href="">
+              <img src="Assets/Imagens/Pokemon.png" alt="" />
+            </a>
+            <a href=""><footer>Pokemon</footer></a>
+          </div>
+
+          <div class="card-front">
+            <a href="">
+              <img src="Assets/Imagens/frontJust.jpg" alt="" />
+            </a>
+            <a href=""><footer>Dom</footer></a>
+          </div>
+        </div>
+
+        <div id="back" class="carousel-item">
+          <div class="card-back">
+            <a
+              href="https://github.com/EwertonFS/Sistema-Bancario"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="Assets/Imagens/backednjust.jpg" alt="" />
+            </a>
+            <a
+              href="https://github.com/EwertonFS/Sistema-Bancario"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHUb"
+              ><footer>Sistema Bank</footer></a
+            >
+          </div>
+
+          <div class="card-back">
+            <a
+              href="https://github.com/EwertonFS/Projeto-ToDoList"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="Assets/Imagens/backednjust.jpg" alt="" />
+            </a>
+            <a
+              href="https://github.com/EwertonFS/Projeto-ToDoList"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><footer>ToDoList</footer></a
+            >
+          </div>
+
+          <div class="card-back">
+            <a
+              href="https://github.com/EwertonFS/LabECommerce"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="Assets/Imagens/backednjust.jpg" alt="" />
+            </a>
+            <a
+              href="https://github.com/EwertonFS/LabECommerce"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><footer>Lab Ecommerce</footer></a
+            >
+          </div>
+
+          <div class="card-back">
+            <a
+              href="https://github.com/EwertonFS/LabenuSystem"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="Assets/Imagens/backednjust.jpg" alt="" />
+            </a>
+            <a
+              href="https://github.com/EwertonFS/LabenuSystem"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><footer>Labenu System</footer></a
+            >
+          </div>
+          <div class="card-back">
+            <a
+              href="https://github.com/EwertonFS/Projeto-LabookBack"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="Assets/Imagens/backednjust.jpg" alt="" />
+            </a>
+            <a
+              href="https://github.com/EwertonFS/Projeto-LabookBack"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <footer>Labook</footer>
+            </a>
+          </div>
+          <div class="card-back">
+            <a
+              href="https://github.com/EwertonFS/Projeto-Lama"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="Assets/Imagens/backednjust.jpg" alt="" />
+            </a>
+            <a
+              href="https://github.com/EwertonFS/Projeto-Lama"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><footer>Lama</footer></a
+            >
+          </div>
+        </div>
+
+        <div id="full" class="carousel-item">
+          <div class="card-full">
+            <a href="https://cubu-client.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+              <img src="Assets/Imagens/challange.png" alt="" />
+            </a>
+            <a
+            href="https://github.com/EwertonFS/Full-Stack-Cubu-Challenge"
+            target="_blank"
+            rel="noopener noreferrer" 
+            >
+            <footer>Cubus</footer>
+          </a>
+          </div>
+
+          <div class="card-full">
+            <a href="">
+              <img src="Assets/Imagens/Blog_Full-stack-dev.jpg" alt="" />
+              <footer>Future Projects</footer>
+            </a>
+          </div>
+
+          <div class="card-full">
+            <a href="">
+              <img src="Assets/Imagens/Blog_Full-stack-dev.jpg" alt="" />
+              <footer>Future Projects</footer>
+            </a>
+          </div>
+
+          <div class="card-full">
+            <a href="">
+              <img src="Assets/Imagens/Blog_Full-stack-dev.jpg" alt="" />
+              <footer>Future Projects</footer>
+            </a>
+          </div>
+
+          <div class="card-full">
+            <a href="">
+              <img src="Assets/Imagens/Blog_Full-stack-dev.jpg" alt="" />
+              <footer>Future Projects</footer>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -210,58 +404,67 @@
       <div class="title-contact-me">
         <p id="coment-title-contact-me">Feel free to contact me anytimes</p>
         <h3>Contact-me</h3>
+        <div class="border-animation-contact"></div>
       </div>
 
       <div class="form-contact-me">
-        <form action="https://exemplo.com/submit" class="form-name">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            placeholder="Name"
-            id="name"
-            name="name"
-            required
-          />
-        </form>
-      
-        <form action="https://exemplo.com/submit" class="form-email">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            placeholder="digite o nome do ususario"
-            id="email"
-            name="email"
-            required
-          />
-        </form>
-      
-        <form action="https://exemplo.com/submit" class="form-subject">
-          <label for="subject">Subject</label>
-          <input
-            type="text"
-            placeholder="digite o nome do ususario"
-            id="subject"
-            name="subject"
-            required
-          />
-        </form>
-      
-        <form action="https://exemplo.com/submit" class="form-message">
-          <label for="texto">Message</label>
-          <br />
-          <textarea
-            id="texto"
-            name="texto"
-            rows="10"
-            cols="50"
-            placeholder="type here"
-            required
-          ></textarea>
-          <br />
-          <input type="submit" value="Enviar" id="btn" />
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/ewerton.businees@gmail.com"
+          method="POST"
+        >
+          <div class="form-name">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              placeholder="Name"
+              id="name-input"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-email">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              placeholder="Email Address"
+              id="email-input"
+              name="email"
+              required
+            />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Obrigado pelo contato,entrarei em contato o quanto antes"
+            />
+          </div>
+          <div class="form-subject">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              placeholder="subject"
+              id="subject-input"
+              name="subject"
+              required
+            />
+            <input type="hidden" name="_subject" value="Novo envio!" />
+          </div>
+          <div class="form-message">
+            <label for="message">Message</label>
+            <br />
+            <textarea
+              id="message-input"
+              name="message"
+              rows="10"
+              cols="50"
+              placeholder="Type your message here"
+              required
+            ></textarea>
+            <br />
+            <input type="submit" value="Enviar" id="btn" />
+          </div>
         </form>
       </div>
-      
 
       <div class="my-contact">
         <div class="title-my-contact">
