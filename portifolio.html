@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- menu google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,-25" />
     <link rel="stylesheet" href="style.css" />
     <!-- fonte Acrescentar pops sanserif-->
 
     <title>Portifólio</title>
   </head>
   <body>
+    
     <header id="home">
       <nav>
+      <!--   <img id="logo" src="Assets/Imagens/logo2.png" alt="logo"> -->
+        <span class="material-symbols-outlined" onclick="show()">
+          menu
+        </span>
+
         <ul class="navBar" onclick="navUser(event)">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -28,7 +36,7 @@
         />
       </video>
       <div class="name">
-        <h1>Ewerton Francis</h1>
+        <h1 id="profile-name">Ewerton&nbsp;<span>Francis</span></h1>
         <h2>I'am <span id="initial-text"></span></h2>
       </div>
       <div class="icon-header">
@@ -61,16 +69,12 @@
         <div class="sub-title-about-me">
           <h4 id="ask">Who am i?</h4>
           <h4 id="intro-sub-title">
-            I'm Emma Smith, a visual UX/UI Designer and Web Developer
+            I'm Ewerton Francis, <!-- a visual UX/UI Designer and --> Web Developer FullStack
           </h4>
         </div>
         <div class="description">
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
-            labore eveniet, neque suscipit velit voluptas, et nobis ratione ex
-            tempora odit optio ea impedit, corrupti possimus minus incidunt. Id,
-            praesentium? Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Ipsa tenetur nemo minima.
+            I am passionate about technology and am always looking for challenges. I am a dedicated professional who is committed to my work. I have problem-solving skills and am determined to learn continuously, which enables me to find creative and effective solutions to market demands.
           </p>
         </div>
         <div class="description-bottom">
@@ -129,6 +133,97 @@
         </div>
       </div>
     </section>
+
+    <section id="experience" class="container-experience">
+      
+      <div class="title-experience">
+        <h3>Experience</h3>
+        <div class="border-animation-experience"></div>
+      </div>
+        
+        <div class="certification">
+            
+            <div id="title-card">
+            <h>Certification</h>
+            </div>
+        
+          <div class="card-body">
+            <img src="Assets/Imagens/labenu.jpeg" alt="Labenu">
+            <p class="card-title">Labenu</p>
+            <p class="card-title">FullStack</p>
+          </div>
+          
+          <div class="card-body">
+            <img src="Assets/Imagens/TIm.jpeg" alt="Css3">
+            <p class="card-title">Tim</p>
+            <p class="card-title">Css3</p>
+          </div>
+          <div class="card-body">
+            <img src="Assets/Imagens/Bradesco.jpeg" alt="Logic">
+            <p class="card-title">Fundation Bradesco</p>
+            <p class="card-title">Programming Logic</p>
+          </div>
+    
+          
+          </div>
+        
+
+
+        <div class="technology">
+          <div id="title-technology">
+            <h>Technology</h>
+          </div>
+            
+          <div class="card-body2">
+            <div>
+              <img src="Assets/Icones/forBlack/icons8-javascript-48.png"alt="javascript">
+              <p>Javascript</p>
+            </div>
+            <div>
+            <img src="Assets/Icones/forBlack/icons8-html-5-48.png" alt="html">
+            <p>Html</p>
+           </div>
+           <div>
+            <img src="Assets/Icones/forBlack/icons8-css3-48.png" alt="css3">
+            <p>Css3</p>
+           </div>
+           <div>
+            <img src="Assets/Icones/forBlack/icons8-reagir-100.png" alt="React">
+            <p>React</p>
+          </div>
+          </div>
+           
+          <div class="card-body2">
+            <div>
+            <img src="Assets/Icones/forBlack/icons8-node-js-48.png" alt="Node">
+            <p>Node</p>
+            </div>
+            <div>
+            <img src="Assets/Icones/forBlack/icons8-typescript-48.png" alt="Typescript">
+            <p>Typescrypt</p>
+            </div>
+            <div>
+            <img src="Assets/Icones/forBlack/icons8-logo-mysql-48.png" alt="Mysql">
+            <p>Mysql</p>
+           </div>
+          </div>
+          <div class="card-body2">
+            <div>
+              <img src="Assets/Icones/forBlack/icons8-git-48.png" alt="git">
+            <p>Git</p>
+            </div>
+            <div>
+            <img src="Assets/Icones/forBlack/postman-icon-svgrepo-com.svg" alt="postman">
+            <p>Postman</p>  
+            </div>
+          </div>
+    </section>
+          
+         
+       
+
+
+      
 
     <section id="projects" class="projects">
       <div class="title-projects">
@@ -230,7 +325,7 @@
             >
           </div>
 
-          <div class="card-front">
+          <div id="Dom">
             <a href="">
               <img src="Assets/Imagens/frontJust.jpg" alt="" />
             </a>
@@ -239,14 +334,14 @@
             >
           </div>
 
-          <div class="card-front">
+          <div id="Dom" >
             <a href="">
               <img src="Assets/Imagens/Pokemon.png" alt="" />
             </a>
             <a href=""><footer>Pokemon</footer></a>
           </div>
 
-          <div class="card-front">
+          <div id="Dom" >
             <a href="">
               <img src="Assets/Imagens/frontJust.jpg" alt="" />
             </a>
@@ -448,6 +543,7 @@
               required
             />
             <input type="hidden" name="_subject" value="Novo envio!" />
+            <input type="hidden" name="_next" value="https://ewertonmyportifolio.000webhostapp.com/pages/thanks.html">
           </div>
           <div class="form-message">
             <label for="message">Message</label>
@@ -468,7 +564,7 @@
 
       <div class="my-contact">
         <div class="title-my-contact">
-          <h3>Contact-me</h3>
+          <h>Contact-me</h>
         </div>
         <div class="sub-title-my-contact">
           <p>
@@ -494,13 +590,13 @@
           />
         </div>
         <div class="icons-contact">
-          <h3 class="highlights">Name</h3>
+          <h class="highlights">Name</h>
           <p>Ewerton Francis</p>
-          <h3 class="highlights">Email</h3>
+          <h class="highlights">Email</h>
           <p>ewerton.businees@gmail.com</p>
-          <h3 class="highlights">Phone</h3>
+          <h class="highlights">Phone</h>
           <p>(79) 9 98311993</p>
-          <h3 class="highlights">Location</h3>
+          <h class="highlights">Location</h>
           <p>Aracaju-Sergipe</p>
         </div>
       </div>

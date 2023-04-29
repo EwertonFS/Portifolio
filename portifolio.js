@@ -1,5 +1,20 @@
-/* Projects*/
+/*Header*/
+const toogle = document.querySelector(".material-symbols-outlined");
+const menu = document.querySelector(".navBar");
 
+/*Acrescentando classe para navBar*/
+const show = () => {
+  if (menu.classList.contains("show-right")) {
+    menu.classList.remove("show-right");
+    menu.classList.add("hide-left");
+  } else {
+    menu.classList.remove("hide-left");
+    menu.classList.add("show-right");
+  }
+
+};
+
+/* Projects*/
 
 function navUser(event) {
   // verifica se o elemento clicado é um link (<a>)
@@ -15,30 +30,24 @@ function navUser(event) {
   }
 }
 
-
-
-
-
-
 /*section*/
 const nodeLinks = document.querySelector(".find-classification").children;
 /* console.log(Array.isArray(nodeLinks));
 console.log(nodeLinks) */
 
-const links = Array.from(nodeLinks)
-console.log(links)
+const links = Array.from(nodeLinks);
+console.log(links);
 /*console.log(Array.isArray(links)) */
 
 /* let busca = links.indexOf(document.getElementById('all'))
 console.log(busca)  */
- 
 
- const nodeListProjects = document.querySelectorAll(".carousel-item");
+const nodeListProjects = document.querySelectorAll(".carousel-item");
 /* console.log(nodeListProjects);
 console.log(Array.isArray(nodeListProjects));  */
 
-const listProjects = Array.from(nodeListProjects)
-console.log(listProjects)
+const listProjects = Array.from(nodeListProjects);
+console.log(listProjects);
 /* 
 listProjects.forEach(elemento => elemento.remove())  Funcionou sumiu todos*/
 
@@ -122,17 +131,6 @@ function classification(event, category) {
   classification.selectedLink = event.target;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* function classification(event) {
   let clickedId = event.target.id;
 
@@ -158,7 +156,6 @@ function classification(event, category) {
     }
   }
 }  */
-
 
 //about me:
 //selection Loop Name
