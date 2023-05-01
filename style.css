@@ -180,15 +180,56 @@ animation-fill-mode: linear;
   }
 }
 
+.icon{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  width:98%;
+  
+  
+ /*  align-self:center;
+  justify-self:center; */
+}
 
+.language{
+  display:grid;
+  width:10%;
+  height:10%;
+  align-self:center;
+  gap:3em;
+  margin-left:2%;
+  cursor:pointer;
+
+  animation-name: show-bottom;
+  animation-duration: 3s;
+  animation-fill-mode: linear;
+}
+
+.language img{
+  height: 2em;
+  
+}
+
+#portuguese:hover{
+  background-color: #28a745;
+  border-radius:90%;
+  transform: scale(1.1);
+}
+
+#english:hover{
+  background-color: #28a745;
+  border-radius:90%;
+  transform: scale(1.1);
+}
 
 .icon-header{
  display:grid;
- align-self: flex-end;
+ align-self: end;
  justify-self: end;
+ align-items:center;
  gap:3em;
- margin-bottom:3em;
- margin-right:3em;
+ margin-bottom:4em;
+/*  margin-right:3em; */
+
  
 animation-name: show-bottom;
 animation-duration: 3s;
@@ -1958,14 +1999,21 @@ height:11em;
 
   textarea:focus {
     background-color: hsl(0, 0%, 0%);
+
    }
   
   
  textarea{
   background-color: var(--secondary-color);
   color:var(--third-color);;
+  }
+
+  textarea:hover{
+      border-bottom: 2px solid var(--fourth-color);
+      transform: scale(1.0.5);
+  }
   
- }
+
  
  input{
   color: var(--third-color);
@@ -2081,8 +2129,10 @@ border-right:solid 3px var(--third-color);
       "title-contact-me"
       "my-contact"
       "form-contact-me";
-    gap:0.3em;
-    padding:1%;
+   /*  gap:0.3em; */
+    padding-right:1%;
+    padding-left:1%;
+    padding-top:6%;
   }
   .my-contact {
     grid-template-columns: 1fr 1.1fr;
@@ -2106,10 +2156,10 @@ border-right:solid 3px var(--third-color);
   .title-contact-me{
     margin-top: 5%;
   }
- /*  .title-my-contact{
-    display:none;
+  .title-my-contact{
+    font-size:small;
   }
-
+  /*
   .sub-title-my-contact{
     display: none;
   } */

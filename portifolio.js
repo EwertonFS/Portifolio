@@ -14,6 +14,75 @@ const show = () => {
 
 };
 
+/* translate site */
+const botao = document.querySelector('.btn-cv');
+botao.style.backgroundColor = 'red';
+/* let allWords = document.querySelectorAll('h4,h3,p') */
+
+const translateBr = ()=>{
+  const textTags = document.querySelectorAll('p, h, h3,h4,nav a'); // seleciona apenas as tags de texto
+  const options = {
+    method: 'POST',
+    headers: {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      Authorization: 'a_VZvjlXK4moD77HW9dgOz1nrHqo8VaaMYfAQ6ChkBOLT74z0k3ktckcaZ2RgIyMNQJC6R4xR59NEBu1Sz'
+    }
+  };
+  
+  textTags.forEach(tag => {
+    const text = tag.textContent; // obtém o texto da tag
+    options.body = JSON.stringify({target: 'pt_br', q: text}); // define o texto para tradução na requisição
+    fetch('https://api-gl.lingvanex.com/language/translate/v2', options)
+      .then(response => response.json())
+      .then(response=> {
+        /* console.log(response) */
+        tag.textContent = response.data.translations[0].translatedText;
+       /*  alert('requisição executa com sucesso') */
+      })
+      .catch(err =>  console.log(err));
+  });
+      
+      const botao = document.querySelector('.btn-cv');
+      botao.innerHTML = '<strong>Currículo pt-BR</strong>';
+      const cvLink = document.getElementById('cv-link');
+      cvLink.href = 'Assets/files/Curriculo Ewerton.pdf';
+  }
+
+  const translateEn = ()=>{
+    const textTags = document.querySelectorAll('p, h, h3,h4,nav a'); // seleciona apenas as tags de texto
+    const options = {
+      method: 'POST',
+      headers: {
+        accept: 'application/json',
+        'content-type': 'application/json',
+        Authorization: 'a_VZvjlXK4moD77HW9dgOz1nrHqo8VaaMYfAQ6ChkBOLT74z0k3ktckcaZ2RgIyMNQJC6R4xR59NEBu1Sz'
+      }
+    };
+    
+    textTags.forEach(tag => {
+      const text = tag.textContent; // obtém o texto da tag
+      options.body = JSON.stringify({target: 'en', q: text}); // define o texto para tradução na requisição
+      fetch('https://api-gl.lingvanex.com/language/translate/v2', options)
+        .then(response => response.json())
+        .then(response=> {
+          /* console.log(response) */
+          tag.textContent = response.data.translations[0].translatedText;
+          
+        })
+        .catch(err =>  console.log(err));
+    });
+  
+        const botao = document.querySelector('.btn-cv');
+        botao.innerHTML = '<strong>Currículo en-GB</strong>';
+        const cvLink = document.getElementById('cv-link');
+        cvLink.href = 'Assets/files/PIRATE KING Resume - Dark.pdf';
+}
+      
+      
+
+
+
 /* Projects*/
 
 function navUser(event) {
