@@ -183,7 +183,8 @@ animation-fill-mode: linear;
 .icon{
   display:grid;
   grid-template-columns:1fr 1fr;
-  width:98%;
+  width:100%;
+  padding:2%;
   
   
  /*  align-self:center;
@@ -196,7 +197,6 @@ animation-fill-mode: linear;
   height:10%;
   align-self:center;
   gap:3em;
-  margin-left:2%;
   cursor:pointer;
 
   animation-name: show-bottom;
@@ -210,13 +210,20 @@ animation-fill-mode: linear;
 }
 
 #portuguese:hover{
-  background-color: #28a745;
+  background-color: hsl(75.63,95.05%,39.61%);
   border-radius:90%;
   transform: scale(1.1);
 }
 
+.selectedLanguage{
+  background-color:#e9ebf0;
+  border-radius:90%;
+  
+  transform: scale(1.2);
+}
+
 #english:hover{
-  background-color: #28a745;
+  background-color: hsl(75.63,95.05%,39.61%);
   border-radius:90%;
   transform: scale(1.1);
 }
@@ -266,10 +273,72 @@ section{
   display: flex;
   z-index: 3;
 }
+/*button hamburguer*/
 
 .material-symbols-outlined{
 display: none;
 }
+
+/* Loading*/
+.lds-ellipsis {
+  display: none;
+  position: relative;
+  width: 2em;
+  height:auto;
+  margin-left:47.8%;
+  
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: hsl(75.63,95.05%,39.61%);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
 
 /*
 320px — 480px: dispositivos móveis
@@ -366,21 +435,7 @@ display: none;
   
   
 @media only screen and (min-width: 481px) and (max-width:768px) {
-/*   h1{
-    font-size: 1.5em;
-     width: 100%;
-  }
 
-  .video-container{
-    min-height: 100vh;
-    min-width: 100vw;
-  }
-
-  nav{
-    margin-right: 5%;
-    padding: 0%;
-    
-  } */
 
 
   h2{
@@ -533,7 +588,6 @@ display: none;
   
 }
   
-
 
 
 
@@ -700,11 +754,11 @@ padding:5%;
  /*  background-color: #f5f5f5; */
   padding: 10px;
   justify-self:start;
-  
+  font-weight: bold;
 }
 
 #email{
-  color:var(--third-color);
+  color:var(--fourth-color);
 }
 
 .data-color{
@@ -719,16 +773,26 @@ color: var(--third-color);
   font-size: 16px;
   border-radius: 15px;
   cursor: pointer;
-  text-align: center;
+  text-align:center;
   opacity: 0.6;
   transition: 0.3s;
-  margin-top: 3%;
+ /*  margin-top: 5%; */
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
 }
+
+/* #eng-cv img{
+  background-color:black;
+
+}  */
 
 .btn-cv:hover{
   opacity:8;
   filter: brightness(125%)
 }
+
 
 .social{
   display: grid;
@@ -1489,6 +1553,24 @@ a:hover{
   color:var(--fourth-color);
 }
 
+footer{
+  display:flex;
+ flex-direction:row;
+ align-items:center;
+ justify-content:center;
+}
+/*imagem footer*/
+ #code {
+ height: 1em;
+ width: 1em; 
+ border-radius: 50%;
+}
+.card-front footer img:hover {
+
+  background-color: var(--fourth-color);
+}
+
+
 
 #coment-projects{
   font-size:medium;
@@ -1549,7 +1631,7 @@ height:11em;
 
 
 .card-front:hover::before{
-  content: "React"; /* necessário para pseudo-elementos ::before/::after */
+  content: "Site React"; /* necessário para pseudo-elementos ::before/::after */
   position: absolute; /* posição absoluta em relação ao elemento pai */
   top: 0; /* posição no topo do elemento pai */
   left: 0; /* posição no início do elemento pai */
@@ -1558,9 +1640,10 @@ height:11em;
   background-color: rgba(0, 0, 0, 0.678); /* fundo semi-transparente */
   z-index: 1; /* coloca o pseudo-elemento acima do elemento pai */
   color: white; /* cor do texto */
-  font-size: 2em; /* tamanho da fonte */
   text-align: center; /* centraliza o texto horizontalmente */
-  line-height: 5em; /* centraliza o texto verticalmente */
+  font-size: 1.7em; /* tamanho da fonte */
+  line-height: 3em; /* centraliza o texto verticalmente */
+  pointer-events: none;/* adicionado para não interferir no clique */
 }
 
 .card-front:hover{
@@ -1578,7 +1661,7 @@ height:11em;
 
 
 #Dom:hover::before{
-  content: "Dom"; /* necessário para pseudo-elementos ::before/::after */
+  content: "Site Dom"; /* necessário para pseudo-elementos ::before/::after */
   position: absolute; /* posição absoluta em relação ao elemento pai */
   top: 0; /* posição no topo do elemento pai */
   left: 0; /* posição no início do elemento pai */
@@ -1587,9 +1670,10 @@ height:11em;
   background-color: rgba(0, 0, 0, 0.678); /* fundo semi-transparente */
   z-index: 1; /* coloca o pseudo-elemento acima do elemento pai */
   color: white; /* cor do texto */
-  font-size: 2em; /* tamanho da fonte */
+  font-size: 1.9em; /* tamanho da fonte */
   text-align: center; /* centraliza o texto horizontalmente */
-  line-height: 5em; /* centraliza o texto verticalmente */
+  line-height: 3em; /* centraliza o texto verticalmente */
+  pointer-events: none;/* adicionado para não interferir no clique */
 }
 
 #Dom:hover{
@@ -1617,9 +1701,10 @@ height:11em;
   background-color: rgba(0,0,0,0.5); /* fundo semi-transparente */
   z-index: 1; /* coloca o pseudo-elemento acima do elemento pai */
   color: white; /* cor do texto */
-  font-size: 2em; /* tamanho da fonte */
+  font-size: 1.7em; /* tamanho da fonte */
   text-align: center; /* centraliza o texto horizontalmente */
-  line-height: 5em; /* centraliza o texto verticalmente */
+  line-height: 6.5em; /* centraliza o texto verticalmente */
+  pointer-events: none;/* adicionado para não interferir no clique */
 }
 
 .card-back:hover{
@@ -1644,10 +1729,11 @@ height:11em;
     background-color: rgba(0,0,0,0.5); /* fundo semi-transparente */
     z-index: 1; /* coloca o pseudo-elemento acima do elemento pai */
     color: white; /* cor do texto */
-    font-size: 2em; /* tamanho da fonte */
+    font-size: 1.7em; /* tamanho da fonte */
     text-align: center; /* centraliza o texto horizontalmente */
-    line-height: 4em; /* centraliza o texto verticalmente */
+    line-height: 5.5em; /* centraliza o texto verticalmente */
     transform: translateY(0%);
+    pointer-events: none;/* adicionado para não interferir no clique */
   }
 
   .card-full:hover::after{
@@ -1660,10 +1746,11 @@ height:11em;
     background-color: rgba(0,0,0,0.0); /* fundo semi-transparente */
     z-index: 1; /* coloca o pseudo-elemento acima do elemento pai */
     color: white; /* cor do texto */
-    font-size: 2em; /* tamanho da fonte */
+    font-size: 1.7em; /* tamanho da fonte */
     text-align: center; /* centraliza o texto horizontalmente */
-    line-height: 6em; /* centraliza o texto verticalmente */
+    line-height: 7.5em; /* centraliza o texto verticalmente */
     transform: translateY(0%);
+    pointer-events: none;/* adicionado para não interferir no clique */
   }
 
 .card-full:hover{
@@ -2207,6 +2294,7 @@ border-right:solid 3px var(--third-color);
   #btn{
     height: 65%;
     margin: 0;
+    padding-top: 5px;
   }
 
   .border-animation-contact{
