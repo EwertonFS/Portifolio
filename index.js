@@ -54,7 +54,7 @@ const translateBr = ()=>{
         const botao = document.querySelector('.btn-cv');
         botao.innerHTML ='<img src="Assets/Imagens/icons8-brazil-48.png" alt="portuguese"><strong>Currículo BR</strong>';
         const cvLink = document.getElementById('cv-link');
-        cvLink.href = 'Assets/files/Curriculo Ewerton.pdf';
+        cvLink.href = 'Assets/files/EwertonCvBr-Dark.pdf';
         const selectEn =document.getElementById('english');
         selectEn.classList.remove('selectedLanguage')
         const select = document.getElementById('portuguese');
@@ -98,7 +98,7 @@ const translateBr = ()=>{
           const botao = document.querySelector('.btn-cv');
           botao.innerHTML ='<img src="Assets/Imagens/icons8-great-britain-48.png" alt="english"><strong>Currículo EN</strong>';
           const cvLink = document.getElementById('cv-link');
-          cvLink.href = 'Assets/files/PIRATE KING Resume - Dark.pdf';
+          cvLink.href = 'Assets/files/EwertonCvEn- Dark.pdf';
           const select = document.getElementById('portuguese');
           select.classList.remove('selectedLanguage'); 
           const selectEn =document.getElementById('english');

@@ -1565,6 +1565,7 @@ footer{
  width: 1em; 
  border-radius: 50%;
 }
+
 .card-front footer img:hover {
 
   background-color: var(--fourth-color);
@@ -1683,6 +1684,10 @@ height:11em;
 }
 
 
+#Dom img:hover {
+  background-color: var(--fourth-color);
+  }
+
 
 
 .card-back{
@@ -1711,6 +1716,11 @@ height:11em;
   transform: scale(1.1);
   cursor: pointer;
   z-index: 2;
+}
+
+.card-back footer img:hover {
+
+  background-color: var(--fourth-color);
 }
 
 .card-full{
@@ -1757,7 +1767,11 @@ height:11em;
     transform: scale(1.1);
     z-index: 2;
     cursor: pointer;
-}   
+}
+
+.card-full footer img:hover {
+background-color: var(--fourth-color);
+}
 
 .carousel .carousel-item img{
   height: 100%; 
